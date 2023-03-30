@@ -86,7 +86,7 @@ while questions:
         file.close()
         os.system(f"java -jar encoder/encoder.jar -i systemInfo.txt -o inject.bin -l {language}\n")
         print("File create: inject.bin")
-        #os.remove("systemInfo.txt")
+        os.remove("systemInfo.txt")
     elif questions == "4":
         print('Stop program!!!')
         break
