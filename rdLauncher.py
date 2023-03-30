@@ -53,6 +53,7 @@ while questions:
         file.write('STRING New-LocalUser -Name "' + user + '" -Password $password -FullName "' + user + '" -Description "Test user"\n')
         file.write("ENTER\n")
         file.write("STRING exit")
+        file.write("ENTER")
         file.close()
         os.system(f"java -jar encoder/encoder.jar -i createUser.txt -o inject.bin -l {language}\n")
         print("File create: inject.bin")
